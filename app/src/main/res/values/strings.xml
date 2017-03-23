@@ -6,4 +6,11 @@
     <string name="division_button">/</string>
     <string name="first_number"></string>
     <string name="second_number"></string>
+    <string name="firstNom">Enter the first Number</string>
+    <string name="scndNum">Enter the second Number</string>
+    <string name="addRadio">+</string>
+    <string name="subRadio">-</string>
+    <string name="mulRadio">*</string>
+    <string name="divRadio">/</string>
+    <string name="resultButtton">Compute !</string>
 </resources>

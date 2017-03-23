@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/firstNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/firstNom"
+        android:text="@string/first_number" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+        
+        <RadioButton
+            android:id="@+id/addRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addRadio"
+            android:onClick="onClick"/>
+        <RadioButton
+            android:id="@+id/subRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subRadio"
+            android:onClick="onClick"/>
+        <RadioButton
+            android:id="@+id/mulRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mulRadio"
+            android:onClick="onClick"/>
+        <RadioButton
+            android:id="@+id/divRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/divRadio"
+            android:onClick="onClick"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/secondNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/scndNum"
+        android:text="@string/second_number" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/resButton"
+        android:text="@string/resultButtton" />
+</LinearLayout>

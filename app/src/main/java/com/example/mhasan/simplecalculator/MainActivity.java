@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bttndiv.setOnClickListener(this);
         bttnmul.setOnClickListener(this);
 
-
     }
 
 
@@ -42,24 +41,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String num1 = firstNum.getText().toString();
         String num2 = secondNum.getText().toString();
         int res;
-     /*   res = Integer.parseInt(num1) +Integer.parseInt(num2) ;
-        toast.makeText(getBaseContext(), num1, toast.LENGTH_SHORT ).show();
-        //CharSequence num1 = firstNum.getText() ;
-        //  String s = (num1!= null) ? num1.toString() : "null";
-    */
+
         switch(view.getId()){
-            case R.id.addition_button:
-              res = Integer.parseInt(num1) +Integer.parseInt(num2) ;
-                toast.makeText(getBaseContext(),String.valueOf(res) , toast.LENGTH_SHORT ).show();
-                break;
+              case R.id.addition_button:
+                  if(num1.isEmpty() || num2.isEmpty() ){
+                      String text="Enter a valid number";
+                      toast.makeText(getBaseContext(), text  , toast.LENGTH_SHORT ).show();
+                      break;
+                  }else{
+                      res = Integer.parseInt(num1) +Integer.parseInt(num2) ;
+                      toast.makeText(getBaseContext(),String.valueOf(res) , toast.LENGTH_SHORT ).show();
+                      break;
+
+                  }
 
             case R.id.subtraction_button:
-                 res= Integer.parseInt(num1) - Integer.parseInt(num2) ;
-                  toast.makeText(getBaseContext(),String.valueOf(res)   , toast.LENGTH_SHORT ).show();
-                 break;
-
+                if(num1.isEmpty() || num2.isEmpty() ){
+                    String text="Enter a valid number";
+                    toast.makeText(getBaseContext(), text  , toast.LENGTH_SHORT ).show();
+                    break;
+                }
+                else {
+                    res = Integer.parseInt(num1) - Integer.parseInt(num2);
+                    toast.makeText(getBaseContext(), String.valueOf(res), toast.LENGTH_SHORT).show();
+                    break;
+                }
             case R.id.division_button:
-                if (Integer.parseInt(num2)== 0 ){
+                if (Integer.parseInt(num2)== 0  ){
                     String text="Invalid operation: divide by zero";
                     toast.makeText(getBaseContext(), text  , toast.LENGTH_SHORT ).show();
                     break;
@@ -71,10 +79,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
             case R.id.multiplication_buton:
-                res= Integer.parseInt(num1)* Integer.parseInt(num2) ;
-                toast.makeText(getBaseContext(),String.valueOf(res)   , toast.LENGTH_SHORT ).show();
-                break;
-
+                if(num1.isEmpty() || num2.isEmpty() ){
+                    String text="Enter a valid number";
+                    toast.makeText(getBaseContext(), text  , toast.LENGTH_SHORT ).show();
+                    break;
+                }
+                else {
+                    res = Integer.parseInt(num1) * Integer.parseInt(num2);
+                    toast.makeText(getBaseContext(), String.valueOf(res), toast.LENGTH_SHORT).show();
+                    break;
+                }
 
         }
 
